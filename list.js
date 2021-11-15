@@ -1,9 +1,6 @@
 const listForm = document.querySelector("#list-form");
 const listInput = document.querySelector(".writing-lst");
 const listPad = document.querySelector(".lstPadJS");
-// const lstBtn = document.querySelector(".x-button"); 
-
-
 
 function handleListInput(event){
     event.preventDefault();
@@ -16,7 +13,7 @@ function handleListInput(event){
     aList.innerHTML = `${listItem}`;
     itemBag.appendChild(aList);
     const deleteBnt = document.createElement("button");
-    deleteBnt.innerHTML = `❌`;
+    deleteBnt.innerHTML = `👌`;
     deleteBnt.setAttribute("class", "x-button");
     itemBag.appendChild(deleteBnt);
 }
