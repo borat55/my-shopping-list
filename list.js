@@ -1,0 +1,30 @@
+const listForm = document.querySelector("#list-form");
+const listInput = document.querySelector(".writing-lst");
+const listPad = document.querySelector(".lstPadJS");
+// const lstBtn = document.querySelector(".x-button"); 
+
+
+
+function handleListInput(event){
+    event.preventDefault();
+    const listItem = listInput.value
+    listInput.value = "";
+    const itemBag = document.createElement("div");
+    itemBag.setAttribute("class", "item-bag");
+    listPad.appendChild(itemBag);
+    const aList = document.createElement("li");
+    aList.innerHTML = `${listItem}`;
+    itemBag.appendChild(aList);
+    const deleteBnt = document.createElement("button");
+    deleteBnt.innerHTML = `❌`;
+    deleteBnt.setAttribute("class", "x-button");
+    itemBag.appendChild(deleteBnt);
+}
+
+function handleDeleteBtn(event){
+    const listBag = event.target.parentNode
+    listBag.remove();
+}
+
+listForm.addEventListener("submit", handleListInput);
+listPad.addEventListener("click", handleDeleteBtn)

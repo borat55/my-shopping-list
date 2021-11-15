@@ -68,7 +68,7 @@ section {
   color: #880e4f;
 }
 
-button {
+.lst-btn {
   width: 40px;
   height: 40px;
   font-size: 20px;
@@ -78,4 +78,25 @@ button {
   color: white;
   background-color: #880e4f;
   cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-bag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #880e4f;
+}
+
+.x-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 3px;
 }
