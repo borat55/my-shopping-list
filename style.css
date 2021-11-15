@@ -51,7 +51,7 @@ section {
 }
 
 .writing-lst {
-  width: 86%;
+  width: 90%;
   margin-top: 20px;
   padding: 10px;
   border: 1px solid transparent;
@@ -60,6 +60,7 @@ section {
   font-weight: 500;
   color: #bf5f82;
   background-color: #fce4ec;
+  box-sizing: border-box;
 }
 
 .writing-lst:focus {
