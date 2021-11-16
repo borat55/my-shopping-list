@@ -13,7 +13,9 @@ function handleListInput(event){
     aList.innerHTML = `${listItem}`;
     itemBag.appendChild(aList);
     const deleteBnt = document.createElement("button");
+    deleteBnt.setAttribute("class", "delete-btn")
     deleteBnt.innerHTML = `👌`;
+    deleteBnt.addEventListener("click", handleDeleteBtn)
     deleteBnt.setAttribute("class", "x-button");
     itemBag.appendChild(deleteBnt);
 }
@@ -24,4 +26,3 @@ function handleDeleteBtn(event){
 }
 
 listForm.addEventListener("submit", handleListInput);
-listPad.addEventListener("click", handleDeleteBtn)
