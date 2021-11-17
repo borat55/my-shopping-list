@@ -6,12 +6,14 @@ function handleListInput(event){
     event.preventDefault();
     const listItem = listInput.value
     listInput.value = "";
+    listInput.focus();
     const itemBag = document.createElement("div");
     itemBag.setAttribute("class", "item-bag");
     listPad.appendChild(itemBag);
     const aList = document.createElement("li");
     aList.innerHTML = `${listItem}`;
     itemBag.appendChild(aList);
+    itemBag.scrollIntoView({block:"center"})
     const deleteBnt = document.createElement("button");
     deleteBnt.setAttribute("class", "delete-btn")
     deleteBnt.innerHTML = `👌`;
